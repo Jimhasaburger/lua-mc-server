@@ -9,9 +9,8 @@ scoop install luarocks
 ```
 ## get lua socket:
 ```
-luarocks install luasocket
+luarocks install luasocket --server=https://luarocks.org
 ```
-(if this errors, run ``scoop install mingw`` and then run it again)
 ## then run server
 ```
 lua main.lua
