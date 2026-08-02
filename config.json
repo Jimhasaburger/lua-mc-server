@@ -1,0 +1,18 @@
+{
+    "server": {
+        "motd": "A lua minecraft server.",
+        "maxPlayers": 20,
+        "onlinePlayers": 0,
+        "versionName": "26.2",
+        "protocol": 776
+    },
+
+    "socket": {
+        "host": "*",
+        "port": 25565
+    },
+    
+    "authentication": {
+        "onlineMode": false
+    }
+}
