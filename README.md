@@ -6,6 +6,8 @@ very basic lua minecraft server.
 
 [o] basic auth
 
+[o] loading terrain.... forever...
+
 [ ] go ingame (world)
 
 [ ] ...
