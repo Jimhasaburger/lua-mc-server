@@ -212,4 +212,20 @@ function types.readBytesFromString(data, offset, count)
     return data:sub(offset, offset + count - 1), offset + count
 end
 
+function types.writeIdentifier(value)
+    return types.writeString(value)
+end
+
+function types.readIdentifierFromString(data, offset)
+    return types.readStringFromString(data, offset)
+end
+function types.packPosition(x, y, z)
+    local val = ((x & 0x3FFFFFF) << 38) | ((z & 0x3FFFFFF) << 12) | (y & 0xFFF)
+    if val >= 2 ^ 63 then
+        val = val - 2 ^ 64
+    end
+    return types.writeLong(val)
+end
+
+
 return types

@@ -1,6 +1,7 @@
 local login = {}
 local types = require("types")
 local packet = require("packet")
+local config = require("configuration")
 
 local md5 = require("md5")
 
@@ -30,7 +31,8 @@ function login.handle(client)
 
     local name
     name, offset = types.readStringFromString(pkt.data, offset)
-    print(name)
+
+    print("username: " .. name .. " received.")
 
     local uuid = offlineUUID(name)
 
@@ -45,6 +47,15 @@ function login.handle(client)
     local loginSuccess = packet.encode(2, payload)
 
     client:send(loginSuccess)
+    local ackPkt = packet.decode(client)
+
+    if ackPkt.id ~= 0x03 then -- 0x03 is Login Acknowledged
+        error("Expected Login Acknowledged packet, got ID: " .. tostring(ackPkt.id))
+    end
+
+    print("Login worked.")
+    print("sending over to configuration")
+    config.handle(client, name, uuid)
 end
 
 return login

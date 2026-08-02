@@ -44,6 +44,7 @@ while true do
 
             if nextState == 1 then
                 serverlist.handle(client)
+                client:close()
             elseif nextState == 2 then
                 login.handle(client)
             else
@@ -55,6 +56,4 @@ while true do
     if not ok then
         print("Client error:", err)
     end
-
-    client:close()
 end

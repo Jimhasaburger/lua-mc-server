@@ -1,0 +1,520 @@
+{
+  "minecraft:banner_pattern": [
+    {
+      "name": "minecraft:no_item_required",
+      "values": [
+        "minecraft:square_bottom_left",
+        "minecraft:square_bottom_right",
+        "minecraft:square_top_left",
+        "minecraft:square_top_right",
+        "minecraft:stripe_bottom",
+        "minecraft:stripe_top",
+        "minecraft:stripe_left",
+        "minecraft:stripe_right",
+        "minecraft:stripe_center",
+        "minecraft:stripe_middle",
+        "minecraft:stripe_downright",
+        "minecraft:stripe_downleft",
+        "minecraft:small_stripes",
+        "minecraft:cross",
+        "minecraft:straight_cross",
+        "minecraft:triangle_bottom",
+        "minecraft:triangle_top",
+        "minecraft:triangles_bottom",
+        "minecraft:triangles_top",
+        "minecraft:diagonal_left",
+        "minecraft:diagonal_up_right",
+        "minecraft:diagonal_up_left",
+        "minecraft:diagonal_right",
+        "minecraft:circle",
+        "minecraft:rhombus",
+        "minecraft:half_vertical",
+        "minecraft:half_horizontal",
+        "minecraft:half_vertical_right",
+        "minecraft:half_horizontal_bottom",
+        "minecraft:border",
+        "minecraft:gradient",
+        "minecraft:gradient_up"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/bordure_indented",
+      "values": [
+        "minecraft:curly_border"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/creeper",
+      "values": [
+        "minecraft:creeper"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/field_masoned",
+      "values": [
+        "minecraft:bricks"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/flow",
+      "values": [
+        "minecraft:flow"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/flower",
+      "values": [
+        "minecraft:flower"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/globe",
+      "values": [
+        "minecraft:globe"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/guster",
+      "values": [
+        "minecraft:guster"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/mojang",
+      "values": [
+        "minecraft:mojang"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/piglin",
+      "values": [
+        "minecraft:piglin"
+      ]
+    },
+    {
+      "name": "minecraft:pattern_item/skull",
+      "values": [
+        "minecraft:skull"
+      ]
+    }
+  ],
+  "minecraft:damage_type": [
+    {
+      "name": "minecraft:always_hurts_ender_dragons",
+      "values": [
+        "#minecraft:is_explosion"
+      ]
+    },
+    {
+      "name": "minecraft:always_kills_armor_stands",
+      "values": [
+        "minecraft:arrow",
+        "minecraft:trident",
+        "minecraft:fireball",
+        "minecraft:wither_skull",
+        "minecraft:wind_charge"
+      ]
+    },
+    {
+      "name": "minecraft:always_most_significant_fall",
+      "values": [
+        "minecraft:out_of_world"
+      ]
+    },
+    {
+      "name": "minecraft:always_triggers_silverfish",
+      "values": [
+        "minecraft:magic"
+      ]
+    },
+    {
+      "name": "minecraft:avoids_guardian_thorns",
+      "values": [
+        "minecraft:magic",
+        "minecraft:thorns",
+        "#minecraft:is_explosion"
+      ]
+    },
+    {
+      "name": "minecraft:burn_from_stepping",
+      "values": [
+        "minecraft:campfire",
+        "minecraft:hot_floor",
+        "minecraft:sulfur_cube_hot"
+      ]
+    },
+    {
+      "name": "minecraft:burns_armor_stands",
+      "values": [
+        "minecraft:on_fire"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_armor",
+      "values": [
+        "minecraft:on_fire",
+        "minecraft:in_wall",
+        "minecraft:cramming",
+        "minecraft:drown",
+        "minecraft:fly_into_wall",
+        "minecraft:generic",
+        "minecraft:wither",
+        "minecraft:dragon_breath",
+        "minecraft:starve",
+        "minecraft:fall",
+        "minecraft:ender_pearl",
+        "minecraft:freeze",
+        "minecraft:stalagmite",
+        "minecraft:magic",
+        "minecraft:indirect_magic",
+        "minecraft:out_of_world",
+        "minecraft:generic_kill",
+        "minecraft:sonic_boom",
+        "minecraft:outside_border"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_effects",
+      "values": [
+        "minecraft:starve"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_enchantments",
+      "values": [
+        "minecraft:sonic_boom"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_invulnerability",
+      "values": [
+        "minecraft:out_of_world",
+        "minecraft:generic_kill"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_resistance",
+      "values": [
+        "minecraft:out_of_world",
+        "minecraft:generic_kill"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_shield",
+      "values": [
+        "#minecraft:bypasses_armor",
+        "minecraft:cactus",
+        "minecraft:campfire",
+        "minecraft:dry_out",
+        "minecraft:falling_anvil",
+        "minecraft:falling_stalactite",
+        "minecraft:hot_floor",
+        "minecraft:sulfur_cube_hot",
+        "minecraft:in_fire",
+        "minecraft:lava",
+        "minecraft:lightning_bolt",
+        "minecraft:sweet_berry_bush"
+      ]
+    },
+    {
+      "name": "minecraft:bypasses_wolf_armor",
+      "values": [
+        "#minecraft:bypasses_invulnerability",
+        "minecraft:cramming",
+        "minecraft:drown",
+        "minecraft:dry_out",
+        "minecraft:freeze",
+        "minecraft:in_wall",
+        "minecraft:indirect_magic",
+        "minecraft:magic",
+        "minecraft:outside_border",
+        "minecraft:starve",
+        "minecraft:thorns",
+        "minecraft:wither"
+      ]
+    },
+    {
+      "name": "minecraft:can_break_armor_stand",
+      "values": [
+        "minecraft:player_explosion",
+        "#minecraft:is_player_attack"
+      ]
+    },
+    {
+      "name": "minecraft:damages_helmet",
+      "values": [
+        "minecraft:falling_anvil",
+        "minecraft:falling_block",
+        "minecraft:falling_stalactite"
+      ]
+    },
+    {
+      "name": "minecraft:ignites_armor_stands",
+      "values": [
+        "minecraft:in_fire",
+        "minecraft:campfire"
+      ]
+    },
+    {
+      "name": "minecraft:is_drowning",
+      "values": [
+        "minecraft:drown"
+      ]
+    },
+    {
+      "name": "minecraft:is_explosion",
+      "values": [
+        "minecraft:fireworks",
+        "minecraft:explosion",
+        "minecraft:player_explosion",
+        "minecraft:bad_respawn_point"
+      ]
+    },
+    {
+      "name": "minecraft:is_fall",
+      "values": [
+        "minecraft:fall",
+        "minecraft:ender_pearl",
+        "minecraft:stalagmite"
+      ]
+    },
+    {
+      "name": "minecraft:is_fire",
+      "values": [
+        "minecraft:in_fire",
+        "minecraft:campfire",
+        "minecraft:on_fire",
+        "minecraft:lava",
+        "minecraft:hot_floor",
+        "minecraft:sulfur_cube_hot",
+        "minecraft:unattributed_fireball",
+        "minecraft:fireball"
+      ]
+    },
+    {
+      "name": "minecraft:is_freezing",
+      "values": [
+        "minecraft:freeze"
+      ]
+    },
+    {
+      "name": "minecraft:is_lightning",
+      "values": [
+        "minecraft:lightning_bolt"
+      ]
+    },
+    {
+      "name": "minecraft:is_player_attack",
+      "values": [
+        "minecraft:player_attack",
+        "minecraft:spear",
+        "minecraft:mace_smash"
+      ]
+    },
+    {
+      "name": "minecraft:is_projectile",
+      "values": [
+        "minecraft:arrow",
+        "minecraft:trident",
+        "minecraft:mob_projectile",
+        "minecraft:unattributed_fireball",
+        "minecraft:fireball",
+        "minecraft:wither_skull",
+        "minecraft:thrown",
+        "minecraft:wind_charge"
+      ]
+    },
+    {
+      "name": "minecraft:mace_smash",
+      "values": [
+        "minecraft:mace_smash"
+      ]
+    },
+    {
+      "name": "minecraft:no_anger",
+      "values": [
+        "minecraft:mob_attack_no_aggro"
+      ]
+    },
+    {
+      "name": "minecraft:no_impact",
+      "values": [
+        "minecraft:drown"
+      ]
+    },
+    {
+      "name": "minecraft:no_knockback",
+      "values": [
+        "minecraft:explosion",
+        "minecraft:player_explosion",
+        "minecraft:bad_respawn_point",
+        "minecraft:in_fire",
+        "minecraft:lightning_bolt",
+        "minecraft:on_fire",
+        "minecraft:lava",
+        "minecraft:hot_floor",
+        "minecraft:sulfur_cube_hot",
+        "minecraft:in_wall",
+        "minecraft:cramming",
+        "minecraft:drown",
+        "minecraft:starve",
+        "minecraft:cactus",
+        "minecraft:fall",
+        "minecraft:ender_pearl",
+        "minecraft:fly_into_wall",
+        "minecraft:out_of_world",
+        "minecraft:generic",
+        "minecraft:magic",
+        "minecraft:wither",
+        "minecraft:dragon_breath",
+        "minecraft:dry_out",
+        "minecraft:sweet_berry_bush",
+        "minecraft:freeze",
+        "minecraft:stalagmite",
+        "minecraft:outside_border",
+        "minecraft:generic_kill",
+        "minecraft:campfire",
+        "minecraft:spear"
+      ]
+    },
+    {
+      "name": "minecraft:no_wolf_retaliation",
+      "values": [
+        "minecraft:sulfur_cube_hot"
+      ]
+    },
+    {
+      "name": "minecraft:panic_causes",
+      "values": [
+        "#minecraft:panic_environmental_causes",
+        "minecraft:arrow",
+        "minecraft:dragon_breath",
+        "minecraft:explosion",
+        "minecraft:fireball",
+        "minecraft:fireworks",
+        "minecraft:indirect_magic",
+        "minecraft:magic",
+        "minecraft:mob_attack",
+        "minecraft:mob_projectile",
+        "minecraft:player_explosion",
+        "minecraft:sonic_boom",
+        "minecraft:sting",
+        "minecraft:thrown",
+        "minecraft:trident",
+        "minecraft:unattributed_fireball",
+        "minecraft:wind_charge",
+        "minecraft:wither",
+        "minecraft:wither_skull",
+        "#minecraft:is_player_attack"
+      ]
+    },
+    {
+      "name": "minecraft:panic_environmental_causes",
+      "values": [
+        "minecraft:cactus",
+        "minecraft:freeze",
+        "minecraft:hot_floor",
+        "minecraft:sulfur_cube_hot",
+        "minecraft:in_fire",
+        "minecraft:lava",
+        "minecraft:lightning_bolt",
+        "minecraft:on_fire"
+      ]
+    },
+    {
+      "name": "minecraft:sulfur_cube_with_block_immune_to",
+      "values": [
+        "minecraft:arrow",
+        "minecraft:cactus",
+        "minecraft:dry_out",
+        "minecraft:fall",
+        "minecraft:falling_anvil",
+        "minecraft:falling_block",
+        "minecraft:falling_stalactite",
+        "minecraft:freeze",
+        "minecraft:mace_smash",
+        "minecraft:hot_floor",
+        "minecraft:mob_attack",
+        "minecraft:mob_attack_no_aggro",
+        "minecraft:mob_projectile",
+        "minecraft:player_attack",
+        "minecraft:spear",
+        "minecraft:spit",
+        "minecraft:stalagmite",
+        "minecraft:sting",
+        "minecraft:sulfur_cube_hot",
+        "minecraft:sweet_berry_bush",
+        "minecraft:thrown",
+        "minecraft:trident",
+        "minecraft:wind_charge",
+        "#minecraft:is_explosion"
+      ]
+    },
+    {
+      "name": "minecraft:witch_resistant_to",
+      "values": [
+        "minecraft:magic",
+        "minecraft:indirect_magic",
+        "minecraft:sonic_boom",
+        "minecraft:thorns"
+      ]
+    },
+    {
+      "name": "minecraft:wither_immune_to",
+      "values": [
+        "minecraft:drown"
+      ]
+    }
+  ],
+  "minecraft:block": [
+    {
+      "name": "minecraft:infiniburn_overworld",
+      "values": [
+        "minecraft:netherrack",
+        "minecraft:magma_block"
+      ]
+    },
+    {
+      "name": "minecraft:infiniburn_nether",
+      "values": [
+        "#minecraft:infiniburn_overworld"
+      ]
+    },
+    {
+      "name": "minecraft:infiniburn_end",
+      "values": [
+        "#minecraft:infiniburn_overworld",
+        "minecraft:bedrock"
+      ]
+    }
+  ],
+  "minecraft:timeline": [
+    {
+      "name": "minecraft:universal",
+      "values": [
+        "minecraft:villager_schedule"
+      ]
+    },
+    {
+      "name": "minecraft:in_overworld",
+      "values": [
+        "#minecraft:universal",
+        "minecraft:day",
+        "minecraft:moon",
+        "minecraft:early_game"
+      ]
+    },
+    {
+      "name": "minecraft:in_nether",
+      "values": [
+        "#minecraft:universal"
+      ]
+    },
+    {
+      "name": "minecraft:in_end",
+      "values": [
+        "#minecraft:universal"
+      ]
+    }
+  ]
+}

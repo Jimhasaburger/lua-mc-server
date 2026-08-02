@@ -14,5 +14,24 @@
     
     "authentication": {
         "onlineMode": false
+    },
+
+    "world": {
+        "dimensionNames": ["minecraft:overworld"],
+        "viewDistance": 10,
+        "simulationDistance": 10,
+        "reducedDebugInfo": false,
+        "enableRespawnScreen": true,
+        "doLimitedCrafting": false,
+        "dimensionType": 0,
+        "dimensionName": "minecraft:overworld",
+        "hashedSeed": 0,
+        "gameMode": 1,
+        "previousGameMode": -1,
+        "isDebug": false,
+        "isFlat": false,
+        "portalCooldown": 0,
+        "seaLevel": 63,
+        "enforcesSecureChat": false
     }
 }
