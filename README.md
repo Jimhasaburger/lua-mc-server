@@ -18,3 +18,4 @@ lua main.lua
 its in development. heres a screenshots of what i accomplished.
 <img width="627" height="85" alt="image" src="https://github.com/user-attachments/assets/38478e2b-4e58-4253-99cb-d8c0670e5fa5" />
 <img width="665" height="103" alt="image" src="https://github.com/user-attachments/assets/17ea58f2-e1b2-4ec6-826f-a4cebbb06570" />
+i got to joining world... (when im using offline mode auth uncompressed it is really easy.)
