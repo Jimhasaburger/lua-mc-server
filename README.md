@@ -2,11 +2,11 @@
 very basic lua minecraft server.
 # checklist
 
-[o] server list
+[x] server list
 
-[o] basic auth
+[x] basic auth
 
-[o] loading terrain.... forever...
+[x] loading terrain.... forever...
 
 [ ] go ingame (world)
 
