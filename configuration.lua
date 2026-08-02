@@ -4,15 +4,13 @@ local packet = require("packet")
 local configuration = {}
 
 function configuration.handle(client, name, uuid)
-    print("configuration!")
 
     while true do
         local pkt = packet.decode(client)
 
-        print("Received config packet:", pkt.id)
 
         if pkt.id == 2 then
-            print("User has mods, ignoring plugin info")
+            print("User has mods")
         else
             break
         end
@@ -33,7 +31,7 @@ function configuration.handle(client, name, uuid)
     local accept = packet.decode(client)
 
     if accept.id == 9 then
-        print("Code of Conduct accepted")
+        print("OK")
     else
         print("Expected Code of Conduct accept, got:", accept.id)
     end
@@ -43,12 +41,11 @@ function configuration.handle(client, name, uuid)
                              .. types.writeString("core") 
                              .. types.writeString("26.2")
     
-    print("Sending Select Known Packs...")
     client:send(packet.encode(14, known_packs_payload))
 
     local client_packs_response = packet.decode(client)
     if client_packs_response.id == 7 then
-        print("Received Known Packs response from client.")
+        print("OK")
     else
         print("Warning: Expected Known Packs response (7), got:", client_packs_response.id)
     end
@@ -65,10 +62,11 @@ function configuration.handle(client, name, uuid)
     
     local ack = packet.decode(client)
     if ack.id == 3 then
-        print("client accepted tags and registry!")
+        print("OK")
+    else
+        error("ERROR!")
     end
     
-    print("Configuration finished, now going to play mode")
     local play = require("play")
     play.handle(client, name, uuid)
 end

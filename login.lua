@@ -21,7 +21,6 @@ local function offlineUUID(username)
 end
 
 function login.handle(client)
-    print("Login!")
 
     local pkt = packet.decode(client)
     if pkt.id ~= 0 then
@@ -32,7 +31,7 @@ function login.handle(client)
     local name
     name, offset = types.readStringFromString(pkt.data, offset)
 
-    print("username: " .. name .. " received.")
+    print(name)
 
     local uuid = offlineUUID(name)
 
@@ -53,8 +52,6 @@ function login.handle(client)
         error("Expected Login Acknowledged packet, got ID: " .. tostring(ackPkt.id))
     end
 
-    print("Login worked.")
-    print("sending over to configuration")
     config.handle(client, name, uuid)
 end
 

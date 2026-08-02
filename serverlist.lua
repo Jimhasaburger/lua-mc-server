@@ -10,7 +10,6 @@ f:close()
 local config = json.decode(content)
 
 function serverlist.handle(client, handshake)
-    print("sevrerlist!")
     local pkt = packet.decode(client)
     if pkt.id ~= 0 then
         error("Expected Status Request")
