@@ -2,15 +2,11 @@
 very basic lua minecraft server.
 # checklist
 
-[x] server list
-
-[x] basic auth
-
-[x] loading terrain.... forever...
-
-[ ] go ingame (world)
-
-[ ] ...
+- [x] server list
+- [x] basic auth
+- [x] loading terrain.... forever...
+- [ ] go ingame (world)
+- [ ] ...
 
 # minecraft version?
 26.2, server protocol version 776
