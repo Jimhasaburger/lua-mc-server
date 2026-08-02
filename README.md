@@ -2,9 +2,10 @@
 very basic lua minecraft server.
 
 # use:
-## make sure you have lua:
+## make sure you have lua 5.4:
 ```
-scoop install lua
+scoop bucket add versions
+scoop install lua54
 ```
 ## then run server
 ```
