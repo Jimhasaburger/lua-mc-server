@@ -1,6 +1,10 @@
 # lua-mc-server
 very basic lua minecraft server.
-
+# checklist
+[o] server list
+[o] basic auth
+[] go ingame (world)
+[] ...
 # minecraft version?
 26.2, server protocol version 776
 
