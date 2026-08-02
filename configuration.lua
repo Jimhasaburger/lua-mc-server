@@ -30,9 +30,7 @@ function configuration.handle(client, name, uuid)
     -- wait for accept
     local accept = packet.decode(client)
 
-    if accept.id == 9 then
-        print("OK")
-    else
+    if not accept.id == 9 then
         print("Expected Code of Conduct accept, got:", accept.id)
     end
     -- this is needed
@@ -44,10 +42,8 @@ function configuration.handle(client, name, uuid)
     client:send(packet.encode(14, known_packs_payload))
 
     local client_packs_response = packet.decode(client)
-    if client_packs_response.id == 7 then
-        print("OK")
-    else
-        print("Warning: Expected Known Packs response (7), got:", client_packs_response.id)
+    if not client_packs_response.id == 7 then
+        warn("Expected Known Packs response (7), got:", client_packs_response.id)
     end
     
     local registry = require("registry")
@@ -61,9 +57,7 @@ function configuration.handle(client, name, uuid)
     client:send(packet.encode(3, ""))
     
     local ack = packet.decode(client)
-    if ack.id == 3 then
-        print("OK")
-    else
+    if not ack.id == 3 then
         error("ERROR!")
     end
     

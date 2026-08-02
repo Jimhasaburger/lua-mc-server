@@ -116,7 +116,6 @@ function tags.send(client)
     end
 
     client:send(packet.encode(13, payload))
-    print("Sent " .. registryCount .. " tag registries successfully.")
 end
 
 return tags
