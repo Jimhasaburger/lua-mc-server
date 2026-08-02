@@ -14,3 +14,6 @@ scoop install lua54
 ```
 lua main.lua
 ```
+# why is there no code?
+its in development. heres a screenshot of what i accomplished.
+<img width="627" height="85" alt="image" src="https://github.com/user-attachments/assets/38478e2b-4e58-4253-99cb-d8c0670e5fa5" />
