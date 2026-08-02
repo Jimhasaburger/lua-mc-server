@@ -1,46 +1,8 @@
 local packet = require("packet")
 local types = require("types")
-local json = require("dkjson")
+local datapack = require("datapack")
 
 local tags = {}
-
--- Load JSON data
-local file = assert(io.open("tags.json", "r"))
-local content = file:read("*a")
-file:close()
-local tagData = json.decode(content)
-
--- Load the registries so we can map entry names to their numeric IDs.
--- The order of the entries in each registry (as sent in the Registry Data
--- packets) defines the IDs, starting from 0, so tags must reference those
--- same IDs to stay consistent with the registry.
-local regFile = assert(io.open("registries.json", "r"))
-local regData = json.decode(regFile:read("*a"))
-regFile:close()
-
--- Static registries (e.g. block) are baked into the client and not sent via
--- Registry Data packets, so their entry IDs come from a separate name -> ID
--- map generated from the client's own registry order.
-local staticFile = assert(io.open("block_ids.json", "r"))
-local staticIds = json.decode(staticFile:read("*a"))
-staticFile:close()
-
--- Build a name -> numeric ID lookup for a given registry
-local function idMap(registryName)
-    local map = {}
-    local entries = regData[registryName]
-    if entries then
-        for i, entry in ipairs(entries) do
-            map[entry.name] = i - 1
-        end
-    elseif registryName == "minecraft:block" then
-        map = {}
-        for name, id in pairs(staticIds) do
-            map["minecraft:" .. name] = id
-        end
-    end
-    return map
-end
 
 -- Expand tag entries into a concrete list. Values starting with "#" reference
 -- another tag in the same registry; the client only understands numeric IDs,
@@ -72,31 +34,35 @@ end
 function tags.send(client)
     local payload = ""
 
-    -- 1. Count registries that actually define tags
+    -- 1. Registries that actually define tags
+    local tagData = datapack.tags()
+
     local registryCount = 0
-    for _, tagArray in pairs(tagData) do
-        if #tagArray > 0 then
+    for _, group in ipairs(tagData) do
+        if #group.tags > 0 then
             registryCount = registryCount + 1
         end
     end
     payload = payload .. types.writeVarInt(registryCount)
 
     -- 2. Loop registries
-    for registryName, tagArray in pairs(tagData) do
-        if #tagArray > 0 then
-            payload = payload .. types.writeIdentifier(registryName)
-            payload = payload .. types.writeVarInt(#tagArray) -- Number of tag groups
+    for _, group in ipairs(tagData) do
+        if #group.tags > 0 then
+            payload = payload .. types.writeIdentifier(group.registry)
+            payload = payload .. types.writeVarInt(#group.tags) -- Number of tag groups
 
-            local ids = idMap(registryName)
+            -- Entry IDs: synced registries use the order we send them in;
+            -- built-in registries use their protocol IDs.
+            local ids = datapack.idMap(group.registry, datapack.registryEntries(group.registry))
 
             -- Build a lookup of tag name -> tag object for # references
             local tagByName = {}
-            for _, tagObj in ipairs(tagArray) do
+            for _, tagObj in ipairs(group.tags) do
                 tagByName[tagObj.name] = tagObj
             end
 
             -- 3. Loop tag groups (e.g., "minecraft:is_fire")
-            for _, tagObj in ipairs(tagArray) do
+            for _, tagObj in ipairs(group.tags) do
                 payload = payload .. types.writeIdentifier(tagObj.name)
 
                 -- 4. Expand # references, then convert entries to numeric IDs

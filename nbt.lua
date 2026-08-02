@@ -1214,4 +1214,6 @@ function nbt.decode(input, preservemode)
 
 end
 
+nbt.TagClass = TagClass
+
 return nbt

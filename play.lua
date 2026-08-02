@@ -3,6 +3,21 @@ local types = require("types")
 local play = {}
 local loginpacket = require("loginpacket")
 
+function BlankChunk(chunkX, chunkZ)
+    local payload = ""
+    payload = payload .. types.writeInt(chunkX) .. types.writeInt(chunkZ)
+    payload = payload .. string.char(0x0A, 0x00, 0x00)
+    payload = payload .. types.writeVarInt(0) 
+    payload = payload .. types.writeVarInt(0)
+    payload = payload .. types.writeVarInt(0)
+    payload = payload .. types.writeVarInt(0)
+    payload = payload .. types.writeVarInt(0)
+    payload = payload .. types.writeVarInt(0)
+    payload = payload .. types.writeVarInt(0)
+    payload = payload .. types.writeVarInt(0)
+    return payload
+end
+
 function play.handle(client, name, uuid)
     
     client:send(loginpacket.encode{
@@ -47,7 +62,18 @@ function play.handle(client, name, uuid)
 
     client:send(packet.encode(64, abilitiesPayload))
 
-    
+    local centerPayload = types.writeVarInt(0) .. types.writeVarInt(0)
+    client:send(packet.encode(94, centerPayload))
+
+    local chunks = require("chunks")
+
+    local viewDist = 2
+    for x = -viewDist, viewDist do
+        for z = -viewDist, viewDist do
+            chunks.send(client, packet, 45, x, z, chunks.flat)
+        end
+    end
+
 end
 
 return play
