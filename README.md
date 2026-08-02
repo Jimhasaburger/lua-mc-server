@@ -21,8 +21,7 @@ scoop install lua54
 ```
 lua main.lua
 ```
-# why is there no code?
-its in development. heres a screenshots of what i accomplished.
+# here are some screenshots:
 <img width="627" height="85" alt="image" src="https://github.com/user-attachments/assets/38478e2b-4e58-4253-99cb-d8c0670e5fa5" />
 <img width="665" height="103" alt="image" src="https://github.com/user-attachments/assets/17ea58f2-e1b2-4ec6-826f-a4cebbb06570" />
 i got to joining world... (when im using offline mode auth uncompressed it is really easy.)
@@ -31,6 +30,11 @@ i got to joining world... (when im using offline mode auth uncompressed it is re
 I HATE REGISTRY!!!!!!!!!!!!!!!
 
 <img width="779" height="390" alt="image" src="https://github.com/user-attachments/assets/e0e0e8be-ad41-409e-9d58-222f4d94d2ad" />
+
+
+thats a LOT of fps...
+
+<img width="859" height="513" alt="image" src="https://github.com/user-attachments/assets/dd79bce6-62e3-49c5-9861-9ba86850d2a3" />
 
 
 # other things:
